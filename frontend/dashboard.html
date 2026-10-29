@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow | Mis tareas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body class="dashboard-body">
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-icon">✓</span>
+        <span>Task<span class="accent">Flow</span></span>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Navegación principal">
+        <a href="/dashboard.html" class="nav-active">Mis tareas</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Organiza tu día, alcanza tus metas.</p>
+        <button id="logout-btn" class="logout-btn">Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <p class="eyebrow">PANEL DE PRODUCTIVIDAD</p>
+          <h1>Mis tareas</h1>
+          <p class="dashboard-subtitle">
+            Controla tus pendientes y celebra tus avances.
+          </p>
+        </div>
+        <div class="user-avatar" aria-label="Usuario autenticado">TF</div>
+      </header>
+
+      <section class="stats-grid" aria-label="Estadísticas">
+        <article class="stat-card">
+          <span>Total de tareas</span>
+          <strong id="total-tareas">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Pendientes</span>
+          <strong id="tareas-pendientes">0</strong>
+        </article>
+        <article class="stat-card">
+          <span>Completadas</span>
+          <strong id="tareas-completadas">0</strong>
+        </article>
+      </section>
+
+      <section class="tasks-panel">
+        <div class="section-heading">
+          <div>
+            <h2>Organiza tus actividades</h2>
+            <p>Agrega una tarea y empieza a avanzar.</p>
+          </div>
+        </div>
+
+        <form id="task-form" class="task-form">
+          <input
+            id="task-title"
+            type="text"
+            maxlength="120"
+            required
+            placeholder="¿Qué necesitas hacer hoy?"
+            aria-label="Título de la nueva tarea"
+          >
+          <button class="btn-primary" type="submit">+ Agregar</button>
+        </form>
+
+        <div class="task-toolbar">
+          <div class="task-filters" aria-label="Filtrar tareas">
+            <button type="button" class="filter-active" data-filter="todas">
+              Todas
+            </button>
+            <button type="button" data-filter="pendientes">
+              Pendientes
+            </button>
+            <button type="button" data-filter="completadas">
+              Completadas
+            </button>
+          </div>
+        </div>
+
+        <p id="task-message" role="status" aria-live="polite"></p>
+        <div id="task-list" class="task-list"></div>
+      </section>
+
+      <footer class="dashboard-footer">
+        TaskFlow Full Stack · Proyecto académico
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
