@@ -1,3 +1,8 @@
 node_modules/
 .env
 *.log
+# Datos de usuarios de la Actividad 3
+actividad3/data/usuarios.json
+
+# Archivos temporales
+*.log

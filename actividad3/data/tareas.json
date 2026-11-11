@@ -1,0 +1,16 @@
+[
+  {
+    "id": "0bdb048f-5bda-42d1-a806-259af9aa3c8b",
+    "titulo": "Implementar autenticaci�n JWT",
+    "descripcion": "Proteger las rutas de la API mediante middleware",
+    "completada": false,
+    "fechaCreacion": "2026-11-11T21:12:50.360Z"
+  },
+  {
+    "id": "637f1df0-30ca-482e-bd2f-d09349dd9b08",
+    "titulo": "Documentar pruebas de la API",
+    "descripcion": "Registrar evidencias de CRUD, errores y debugging",
+    "completada": false,
+    "fechaCreacion": "2026-11-11T21:12:50.398Z"
+  }
+]
