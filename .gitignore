@@ -1,3 +1,8 @@
 node_modules/
 .env
 *.log
+# Auditoría local de dependencias
+auditoria-a4.json
+
+# Configuración privada de la Actividad 4
+actividad4/.env
