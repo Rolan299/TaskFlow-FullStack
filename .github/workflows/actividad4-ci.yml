@@ -1,0 +1,35 @@
+
+name: Actividad 4 - Pruebas TaskFlow Inventario
+
+on:
+  push:
+    branches:
+      - actividad-4-productos-mongodb
+  pull_request:
+    branches:
+      - actividad-4-productos-mongodb
+  workflow_dispatch:
+
+jobs:
+  pruebas:
+    name: Jest y Supertest
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Ejecutar 15 pruebas automatizadas
+        run: npm run test:a4
+        env:
+          NODE_ENV: test
+          JWT_SECRET: clave-exclusiva-para-pruebas-jest
